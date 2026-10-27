@@ -355,6 +355,7 @@ body {
 @media (pointer: coarse) {
   .as-btn--sm { --h: 44px; }
   .as-chip, .as-search { height: 44px; }
+  .as-chip { min-width: 44px; justify-content: center; }   /* short labels like "All" stay 44 wide */
   .as-seg label { padding-block: 12px; }
   .as-toggle input { inset: -7px 0; }                                   /* 31px switch, 45px tap area */
   .as-check { position: relative; }
