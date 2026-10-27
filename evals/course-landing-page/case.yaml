@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: course-landing-page
+expected_outcome: |
+  A single working index.html with hero, features, curriculum, pricing and FAQ in a calm Apple-like look: neutral canvas, one accent, pill CTAs, big tight-tracked headlines, soft shadows, light and dark support, reduced-motion support.

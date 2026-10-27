@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: nuke-panel-qss
+expected_outcome: |
+  A valid Python file defining a PySide2 panel with the listed widgets and a QSS stylesheet in macOS dark style: layered dark grays, system blue accent, rounded controls, pill or rounded primary button, focus states.

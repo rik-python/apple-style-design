@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: render-queue-dashboard
+expected_outcome: |
+  A single working dark render-queue.html with layered dark grays, status pills, progress, a GPU widget with a big number and small unit, a pill or accent primary button, hairline separators and tabular numbers.
