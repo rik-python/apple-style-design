@@ -28,7 +28,7 @@
   .phone { width: 340px; max-width: 100%; background: var(--as-bg-grouped); border-radius: 48px; padding: 18px 16px 28px; box-shadow: 0 0 0 10px #1d1d1f, var(--as-e3); }
   .phone .status { display: flex; justify-content: space-between; font: 600 15px var(--as-font); padding: 4px 14px 14px; }
   .phone .title { display: flex; justify-content: space-between; align-items: center; padding: 0 4px; }
-  .phone .as-fab { width: 46px; height: 46px; }
+  .phone .as-fab { width: 44px; height: 44px; }
   .stock { background: #131313; color: #fff; border-radius: 28px; padding: 22px 24px 8px; box-shadow: var(--as-e2); }
   .stock .t { display: flex; justify-content: space-between; align-items: flex-start; }
   .stock .sym { color: rgb(235 235 245 / .6); font: 500 15px var(--as-font); }
@@ -42,10 +42,10 @@
   .palette .lbl { font-size: 13px; color: rgb(235 235 245 / .6); padding: 8px 6px 6px; }
   .palette .it { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 14px; }
   .palette .it.on { background: rgb(255 255 255 / .1); box-shadow: inset 0 0 0 .5px rgb(255 255 255 / .15); }
-  .palette .ic { width: 34px; height: 34px; border-radius: 9px; background: rgb(255 255 255 / .14); display: grid; place-items: center; }
+  .palette .ic { width: 34px; height: 34px; border-radius: 6px; background: rgb(255 255 255 / .14); display: grid; place-items: center; }
   .palette .it small { display: block; color: rgb(235 235 245 / .6); font-size: 14px; }
   .palette hr { border: 0; border-top: .5px solid rgb(255 255 255 / .14); margin: 10px -14px; }
-  .player { display: flex; align-items: center; gap: 14px; padding: 8px 10px 8px 8px; border-radius: 999px; width: min(440px, 100%); }
+  .player { display: flex; align-items: center; gap: 12px; padding: 8px 10px 8px 8px; border-radius: 999px; width: min(440px, 100%); }
   .player .art { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #FF7AB6, #8E7CFF); flex: none; }
   .player .meta { flex: 1; min-width: 0; line-height: 1.2; }
   .player .meta small { opacity: .7; font-size: 13px; }
@@ -58,8 +58,8 @@
   .tbl { overflow-x: auto; }
   .app { display: grid; grid-template-columns: 200px 1fr; min-height: 340px; }
   .app aside { padding: 16px 12px; background: var(--as-surface-2); }
-  .app aside a { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 8px; font-size: 13px; color: var(--as-label); text-decoration: none; }
-  .app aside a.on { background: color-mix(in srgb, var(--as-accent) 15%, transparent); color: var(--as-accent); font-weight: 600; }
+  .app aside a { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border-radius: 10px; font-size: 13px; color: var(--as-label); text-decoration: none; }
+  .app aside a.on { background: color-mix(in srgb, var(--as-accent) 15%, transparent); color: var(--as-accent-text); font-weight: 600; }
   .app main { padding: 18px 24px; }
   .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 16px; margin-top: 16px; }
   .tiles div { aspect-ratio: 1; border-radius: 10px; }
@@ -210,7 +210,7 @@
         <p class="as-headline">Buttons</p>
         <div class="row"><button class="as-btn as-btn--primary">Continue</button><button class="as-btn">Skip</button><button class="as-btn as-btn--tinted as-btn--sm">Edit</button><button class="as-btn as-btn--plain">See all</button></div>
         <div class="row"><button class="as-btn as-btn--gradient">Registration</button><button class="as-btn as-btn--danger as-btn--sm">Delete</button><button class="as-icon-btn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button></div>
-        <div class="row" style="background:#1c1c1e;padding:16px;border-radius:16px"><button class="as-btn as-btn--light">Learn more</button><button class="as-btn as-btn--outline-light">Notify me</button></div>
+        <div class="row" style="background:#1c1c1e;padding:16px;border-radius:14px"><button class="as-btn as-btn--light">Learn more</button><button class="as-btn as-btn--outline-light">Notify me</button></div>
       </div>
       <div class="as-card as-reveal stack">
         <p class="as-headline">Inputs</p>
@@ -235,7 +235,7 @@
           <a href="#">Store</a><a href="#">Radio</a>
         </aside>
         <main>
-          <p class="as-eyebrow" style="color:var(--as-pink);font-size:13px">For you</p>
+          <p class="as-eyebrow" style="color:var(--as-pink-text);font-size:13px">For you</p>
           <h3 class="as-title1">Favorites</h3>
           <div class="tiles">
             <div><div style="background:linear-gradient(135deg,#FF7AB6,#8E7CFF)"></div><p>Neon Bloom</p></div>
