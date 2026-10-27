@@ -1,7 +1,7 @@
 # Apple Style Design
 
 <p align="center">
-  <a href="media/brag.mp4"><img src="media/brag.gif" width="800" alt="Launch video: a lime UI is wiped into a calm Apple-style UI, then widgets, Liquid Glass and controls built with the skill"></a>
+  <a href="media/brag.mp4"><img src="media/brag.gif" width="800" alt="Launch video: a flat default AI settings panel is wiped into the same panel built with the skill, then widgets, Liquid Glass and controls"></a>
 </p>
 <p align="center">
   <a href="media/brag.mp4"><b>Watch with sound (21 s)</b></a>
@@ -19,9 +19,11 @@ It is a full design language distilled from the 64 shots on Dribbble's `apple-st
 
 **The look in one sentence:** calm neutral canvas, one confident accent, content as the hero, soft depth instead of lines, and motion that feels physical.
 
-## Proof, not a mockup
+## What it fixes
 
-The before and after in the video is a real app (Open Cinema Studio, a local-first video editor backed by ComfyUI) restyled by this skill in one pass: same features, same behavior, new look. Its test suite (395 tests) and production build passed after the skin.
+The video opens on an illustration of the flat look AI tools ship by default (framework blue, a random gradient button, gray borders on everything, cramped spacing), then wipes to the same panel built only from this skill's classes: `.as-list`, `.as-toggle`, `.as-choice` and `.as-btn--primary`.
+
+It has also been used on a real app: Open Cinema Studio, a local-first video editor backed by ComfyUI, was restyled with it in one pass with the same features and behavior. Its 395 tests and production build passed after the skin.
 
 ## Install
 
