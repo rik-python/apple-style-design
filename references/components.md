@@ -67,6 +67,8 @@ Text tabs (web nav): 14-15px label-2, active is label + optional 1.5px underline
 
 **Text field** `.as-field`: height 44, radius 12, fill `fill-3` (no border) or `surface` + 1px hairline when on gray canvas. 17px text, placeholder `label-3`. Focus: background to `surface`, ring `0 0 0 4px` accent 25%. Trailing icon 18px `label-2` (phone, calendar in the Accountant form).
 
+**When a fill needs a ring.** Borderless fills are the Apple look, but against their surface they measure about 1.15:1 (field, segmented track) and 1.3:1 (toggle off), below the 3:1 WCAG asks for control boundaries. Keep them borderless when a visible label, placeholder and position make the control obvious. In forms, dense settings panels or anything built for low vision, add `box-shadow: inset 0 0 0 1px var(--as-gray)` to the field, segmented track and off toggle: `#8E8E93` measures 3.26:1 on white and 4.3-5.2:1 on dark surfaces (only 2.92:1 on grouped gray `#F2F2F7`, so put those controls on a white card). Apple's opaque separator (`#C6C6C8` / `#38383A`) is only 1.2-1.7:1: a soft hint, not an accessible boundary.
+
 **Search field** `.as-search`: height 36, radius 10 (or pill on marketing), magnifier 15px `label-2`, placeholder "Search", trailing mic icon. Filter button beside it as a 36px rounded square.
 
 **Command palette** (Bellshire quick search shot, a key pattern):
