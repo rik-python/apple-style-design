@@ -1,10 +1,27 @@
 # Apple Style Design
 
+<p align="center">
+  <a href="media/brag.mp4"><img src="media/brag.gif" width="800" alt="Launch video: a lime UI is wiped into a calm Apple-style UI, then widgets, Liquid Glass and controls built with the skill"></a>
+</p>
+<p align="center">
+  <a href="media/brag.mp4"><b>Watch with sound (21 s)</b></a>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Claude_Code-skill-D97757" alt="Claude Code skill">
+  <img src="https://img.shields.io/badge/license-MIT-0071E3" alt="MIT license">
+  <img src="https://img.shields.io/badge/contrast-WCAG_AA-30D158" alt="WCAG AA contrast">
+  <img src="https://img.shields.io/badge/dark_mode-built_in-5E5CE6" alt="Dark mode built in">
+</p>
+
 A Claude Code skill that makes anything you build look calm, premium and "Apple-like": web pages, dashboards, app screens, widgets, plugin panels (Nuke/PySide, ComfyUI), slides and motion.
 
 It is a full design language distilled from the 64 shots on Dribbble's `apple-style` tag and cross-checked against Apple's Human Interface Guidelines: tokens, components, Liquid Glass materials, spring motion, layout recipes, copy rules and a QA checklist.
 
 **The look in one sentence:** calm neutral canvas, one confident accent, content as the hero, soft depth instead of lines, and motion that feels physical.
+
+## Proof, not a mockup
+
+The before and after in the video is a real app (Open Cinema Studio, a local-first video editor backed by ComfyUI) restyled by this skill in one pass: same features, same behavior, new look. Its test suite (395 tests) and production build passed after the skin.
 
 ## Install
 
