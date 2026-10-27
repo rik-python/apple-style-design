@@ -30,7 +30,7 @@ These are the patterns that showed up across nearly every strong shot. Each has 
 3. **Depth by elevation, not borders.** Cards float on soft, wide, low-opacity shadows; separators are 0.5px hairlines inset from the left edge. Heavy 1px gray borders read as "web form", not Apple.
 4. **Continuous corners everywhere.** Squircle-like radii: 10 (controls), 14 (fields), 20 (list groups, cards), 28 (widgets, sheets), 38+ (device/window), 999 (pills). Nested radius = outer radius minus padding.
 5. **Typography does the hierarchy.** SF Pro / Inter, tight negative tracking at display sizes, bold large titles, gray secondary text instead of smaller sizes. Numbers are heroes: `12.203` big and bold with a small gray unit beside it on the same baseline.
-6. **Gray is a scale, not a color.** Label opacities: primary 100%, secondary 60%, tertiary 30%, quaternary 18%. Never invent a random `#999`.
+6. **Gray is a scale, not a color.** Label opacities: primary 100%, secondary 74% light / 60% dark (Apple ships 60% in light, which is only 3.44:1 on white), tertiary 30%, quaternary 18%. Never invent a random `#999`.
 7. **Pills and circles for actions.** Primary buttons are full pills; icon actions are 44px circles; FABs are filled accent circles with a white SF-style glyph and a soft colored shadow.
 8. **Materials over flat fills.** Overlays, toolbars, docks, sidebars and players use translucent blurred material (Liquid Glass) so the context shows through.
 9. **Generous, rhythmic whitespace.** 4pt grid; 16/20 inner padding; sections breathe (96-160px on desktop). If it feels a bit empty, it is probably right.
@@ -78,7 +78,7 @@ When this skill produces a design:
 
 - Ship working code, not a description. Web: semantic HTML + the token CSS (inline or linked) + minimal JS for motion. Other targets: the platform recipe.
 - Always support light and dark unless the mode picker says dark-only, and respect `prefers-reduced-motion`.
-- Accessibility is part of the look: 4.5:1 text contrast (secondary gray on white passes at 15px+; check tertiary), 44x44 touch targets, visible focus ring (3px `accent-text` outline, 2px offset: an outline, never a box-shadow, so component shadows cannot hide it), labels on icon buttons.
+- Accessibility is part of the look: 4.5:1 text contrast (`label-2` is tuned to pass on white, canvas and grouped gray; `label-3` is only for placeholders, chevrons and disabled states, never for text people must read), 44x44 touch targets, visible focus ring (3px `accent-text` outline, 2px offset: an outline, never a box-shadow, so component shadows cannot hide it), labels on icon buttons.
 - Raw system accents fail contrast as button fills and as small text (white on `#007AFF` = 4.02:1, on `#0A84FF` = 3.65:1). Fill buttons with `accent-fill`, color text with `accent-text`, keep raw `accent` for glows, toggles, icons and big shapes. Safe shades per hue: `references/tokens.md` 3a.
 - State the mode, accent and the 2-3 signature details used in one short line after delivering, so the user can steer.
 

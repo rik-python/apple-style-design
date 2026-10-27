@@ -39,7 +39,7 @@ Rule: dark mode never puts `#000` cards on `#000` canvas. Step up through `#1C1C
 | Token | Light | Dark |
 |---|---|---|
 | `label` | `#000000` (or `#1D1D1F` on marketing) | `#FFFFFF` |
-| `label-2` (secondary) | `rgba(60,60,67,.60)` | `rgba(235,235,245,.60)` |
+| `label-2` (secondary) | `rgba(60,60,67,.74)` (Apple: .60) | `rgba(235,235,245,.60)` |
 | `label-3` (tertiary) | `rgba(60,60,67,.30)` | `rgba(235,235,245,.30)` |
 | `label-4` (quaternary) | `rgba(60,60,67,.18)` | `rgba(235,235,245,.16)` |
 | `fill` | `rgba(120,120,128,.20)` | `rgba(120,120,128,.36)` |
@@ -85,6 +85,7 @@ So every accent comes in three roles. `assets/apple-style.css` ships them as `--
 | purple | `#AF52DE` / `#BF5AF2` | `#8944AB` (6.04) | `#8944AB` (6.04 / 5.41) | `#DA8FFF` (7.58 / 6.21) |
 | green | `#34C759` / `#30D158` | `#1F7A35` (5.39), or keep the vivid fill with black text (9.5+) | `#1F7A35` (5.39 / 4.83) | `#30D158` (8.42 / 6.89) |
 | orange | `#FF9500` / `#FF9F0A` | `#C93400` (5.28), or vivid fill with black text (9.5+) | `#C93400` (5.28 / 4.73) | `#FF9F0A` (8.28 / 6.78) |
+| red | `#FF3B30` / `#FF453A` | `#C4001A` (6.25) | `#C4001A` (6.25 / 5.60) | `#FF6961` (6.03 / 4.94) |
 
 Rules:
 - Changing the accent means changing all three: `--as-accent`, `--as-accent-fill`, `--as-accent-text`. Setting only `--as-accent` on `:root` leaves fill and text on blue. Point all three at the per-hue tokens so dark mode swaps them for you.

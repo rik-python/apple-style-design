@@ -84,7 +84,7 @@ Widget ideas that fit: stat + capsule bars (activity, steps, sleep, sales), tick
 
 Seen in: MUSE desktop player, MAC game menu, AeroDash.
 
-- Window: radius 12-26, traffic lights, unified toolbar 52 tall, sidebar 220 translucent with section labels uppercase 11px `label-3`.
+- Window: radius 12-26, traffic lights, unified toolbar 52 tall, sidebar 220 translucent with section labels uppercase 11px `label-2`.
 - Dense type: body 13px, headline 13px 600, titles 20-28px. Controls 28-32 high.
 - Content tiles: album grid 120-160px squares, 16-20 gap, title + year below.
 - Bottom transport/player bar 64-72 high with scrubber spanning the center.

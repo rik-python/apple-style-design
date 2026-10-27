@@ -83,7 +83,7 @@ Text tabs (web nav): 14-15px label-2, active is label + optional 1.5px underline
 
 - **Chip** `.as-chip`: height 28-32 (44 on touch, via `pointer: coarse`), pill, padding-x 12, 13-14px 500, `surface-2`. Selected: `accent-fill`, white text.
 - **Status pill** `.as-status`: height 22, radius 6 (or pill), 12px 500, tint background (accent 12%), 0.5px accent 30% border optional, leading 5px dot. Colors: New/Nova = blue, Processed = purple, In process = orange, Executed = green, Refusal = red.
-- **Count badge** `.as-badge`: min 20x20, pill, red `#FF3B30`, white 13px 600, 2px canvas-colored ring when overlapping an icon. Large version on app icons (the D-Studio messages icon shows a big red "1" badge overlapping the corner).
+- **Count badge** `.as-badge`: min 20x20, pill, `red-fill` `#C4001A` (raw `#FF3B30` gives white text only 3.55:1), white 13px 600, 2px canvas-colored ring when overlapping an icon. Large version on app icons (the D-Studio messages icon shows a big red "1" badge overlapping the corner).
 - **Keycap** `.as-kbd`: min 24x24, radius 6, `surface-3`, 0.5px ring, 12px 500 text, inner bottom shadow `inset 0 -1px 0 rgb(0 0 0/.2)`.
 - **Eyebrow tag**: tiny pill with accent text and 1px accent 30% border ("CLARITY", "2026 COLLECTION" in gold on black).
 
@@ -142,7 +142,7 @@ The Flight log and Health shots are the canonical recipe.
 
 **Web header** (Astro, Winzy, PMAT, Nuve shots): height 64-72, logo left (wordmark 600), links center 14-15px `label-2` with 28-32 gaps, actions right (text "Log in" + primary small pill "Get Started"). Becomes regular material + hairline bottom on scroll. Optional: whole header is a floating glass pill with 12px top offset.
 
-**Sidebar (macOS / web app)**: width 220-260, material or `surface-2`, section labels 11px 600 uppercase `label-3` ("LIBRARY", "DISCOVER"), rows 28-32px with 16px icon + 13-14px label, selected row = accent 15% tint or `fill` pill with accent icon (NeoCRM uses a pale blue rounded rectangle with 1px blue border).
+**Sidebar (macOS / web app)**: width 220-260, material or `surface-2`, section labels 11px 600 uppercase `label-2` ("LIBRARY", "DISCOVER"; `label-3` is only 1.7:1 at this size), rows 28-32px with 16px icon + 13-14px label, selected row = accent 15% tint or `fill` pill with accent icon (NeoCRM uses a pale blue rounded rectangle with 1px blue border).
 
 **Tab bar**: 49pt + home indicator, thin material, 5 items max, icon 24 + label 10px 500. Selected = accent, others `label-2`. iOS 26 style: floating glass capsule with the selected item in a lighter inner pill.
 
