@@ -21,7 +21,7 @@ It is a full design language distilled from the 64 shots on Dribbble's `apple-st
 
 ## What it fixes
 
-The video opens on an illustration of the flat look AI tools ship by default (framework blue, a random gradient button, gray borders on everything, cramped spacing), then wipes to the same panel built only from this skill's classes: `.as-list`, `.as-toggle`, `.as-choice` and `.as-btn--primary`.
+The video opens on an illustration of the flat look AI tools often ship by default (muddy colors, no hierarchy, gray borders on everything, cramped spacing), then wipes to the same panel built only from this skill's classes (`.as-list`, `.as-toggle`, `.as-choice`, `.as-btn--primary`) as glass over color.
 
 It has also been used on a real app: Open Cinema Studio, a local-first video editor backed by ComfyUI, was restyled with it in one pass with the same features and behavior. Its 395 tests and production build passed after the skin.
 
