@@ -162,7 +162,7 @@ body {
 .as-btn:hover { filter: brightness(1.05); }
 .as-btn:active { transform: scale(.97); transition-duration: .12s; }
 .as-btn:disabled { opacity: .4; pointer-events: none; }
-.as-btn--sm { --h: 34px; padding: 0 14px; font-size: 14px; }
+.as-btn--sm { --h: 36px; padding: 0 14px; font-size: 14px; }
 .as-btn--lg { --h: 52px; padding: 0 28px; font-size: 17px; }
 .as-btn--primary { background: var(--as-accent-fill); color: var(--as-on-accent); }
 .as-btn--tinted { background: color-mix(in srgb, var(--as-accent) 15%, transparent); color: var(--as-accent-text); }
@@ -192,7 +192,7 @@ body {
 /* ---------- Segmented control ---------- */
 .as-seg { position: relative; display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; padding: 2px; border-radius: 9px; background: var(--as-fill-3); }
 .as-seg input { position: absolute; opacity: 0; pointer-events: none; }
-.as-seg label { position: relative; z-index: 1; padding: 6px 16px; text-align: center; font: 500 14px/20px var(--as-font); color: var(--as-label); cursor: pointer; border-radius: 7px; transition: font-weight .2s; }
+.as-seg label { position: relative; z-index: 1; padding: 4px 16px; text-align: center; font: 500 14px/20px var(--as-font); color: var(--as-label); cursor: pointer; border-radius: 7px; transition: font-weight .2s; }
 .as-seg input:checked + label { font-weight: 600; }
 .as-seg input:focus-visible + label { outline: var(--as-focus-ring); outline-offset: 0; }   /* the radio itself is invisible */
 .as-seg__thumb { position: absolute; z-index: 0; top: 2px; bottom: 2px; left: 2px; border-radius: 7px; background: var(--as-surface);
@@ -230,7 +230,7 @@ body {
 .as-field input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--as-label); font: 400 17px/1 var(--as-font); letter-spacing: -.01em; }
 .as-field input::placeholder { color: var(--as-label-3); }
 .as-field svg { width: 18px; height: 18px; flex: none; }
-.as-search { height: 36px; border-radius: 10px; padding: 0 10px; gap: 6px; }
+.as-search { height: 36px; border-radius: 10px; padding: 0 10px; gap: 8px; }
 .as-search input { font-size: 17px; }
 
 /* ---------- Chips, status, badges, keycaps ---------- */
@@ -243,7 +243,7 @@ body {
 .as-badge { display: inline-grid; place-items: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--as-red-fill); color: #FFFFFF; font: 600 13px/1 var(--as-font); font-variant-numeric: tabular-nums; }
 .as-kbd { display: inline-grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 6px; background: var(--as-surface-3); color: var(--as-label); font: 500 12px/1 var(--as-font);
   box-shadow: inset 0 0 0 .5px var(--as-separator), inset 0 -1px 0 rgb(0 0 0 / .15); }
-.as-delta { display: inline-flex; align-items: center; gap: 2px; height: 22px; padding: 0 7px; border-radius: 999px; font: 600 13px/1 var(--as-font); font-variant-numeric: tabular-nums; color: var(--as-green-text); background: color-mix(in srgb, var(--as-green) 14%, transparent); }
+.as-delta { display: inline-flex; align-items: center; gap: 2px; height: 22px; padding: 0 8px; border-radius: 999px; font: 600 13px/1 var(--as-font); font-variant-numeric: tabular-nums; color: var(--as-green-text); background: color-mix(in srgb, var(--as-green) 14%, transparent); }
 .as-delta--down { color: var(--as-red-text); background: color-mix(in srgb, var(--as-red) 14%, transparent); }
 
 /* ---------- Inset grouped list ---------- */
@@ -254,7 +254,7 @@ body {
 /* .as-list clips overflow, so rows draw their ring inside, concentric with the group's corners */
 .as-list .as-row:focus-visible, .as-choice:has(input:focus-visible) { outline: var(--as-focus-ring); outline-offset: -3px; border-radius: calc(var(--as-r-lg) - 3px); }
 .as-row + .as-row::before { content: ""; position: absolute; top: 0; right: 0; left: var(--inset, 16px); border-top: .5px solid var(--as-separator); }
-.as-row--icon { --inset: 58px; }
+.as-row--icon { --inset: 58px; min-height: 52px; padding-block: 4px; }   /* fixed height so a toggle row and a badge row match */
 .as-row__body { flex: 1; min-width: 0; }
 .as-row__title { display: block; font: 400 17px/22px var(--as-font); letter-spacing: -.01em; }
 .as-row__sub { display: block; font: 400 15px/20px var(--as-font); color: var(--as-label-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -347,6 +347,9 @@ body {
   .as-btn--sm { --h: 44px; }
   .as-chip, .as-search { height: 44px; }
   .as-seg label { padding-block: 12px; }
+  .as-toggle input { inset: -7px 0; }                                   /* 31px switch, 45px tap area */
+  .as-check { position: relative; }
+  .as-check::before { content: ""; position: absolute; inset: -11px; }   /* 22px circle, 44px tap area */
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -93,7 +93,7 @@ The Flight log and Health shots are the canonical recipe.
 
 - Page bg `bg-grouped`. Groups are `surface` cards, radius 20 (iOS 26 style; older iOS 10), margin-x 16-20, no shadow in light mode.
 - Section header above group: 20px 600 `label` ("December 2025") with 8px gap below, or 13px uppercase `label-2` for settings-style.
-- Row: min height 44; with subtitle 60-64. Padding 12/16. Title 17px `label`, subtitle 15px `label-2`. Trailing value 17px `label-2` tabular ("2h 45m"), then chevron 13px 600 `label-3`.
+- Row: min height 44; with subtitle 60-64; with a leading icon tile a fixed 52, so a toggle row and a badge row line up. Padding 12/16. Title 17px `label`, subtitle 15px `label-2`. Trailing value 17px `label-2` tabular ("2h 45m"), then chevron 13px 600 `label-3`.
 - Separator: 0.5px hairline inset to the text start (16px, or 60px when rows have icons). Last row has none.
 - Leading icon: 29-30px rounded square (radius 7) with white glyph on a system color (Settings look), or 40-48px avatar circle.
 - Press state: row background `surface-3` for 120ms.

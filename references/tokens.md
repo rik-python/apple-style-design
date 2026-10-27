@@ -205,7 +205,7 @@ All materials: `backdrop-filter: blur(X) saturate(180%)`. Liquid Glass adds edge
 ## 11. Sizes and z-index
 
 - Touch target min 44x44. Icon button 36 (dense desktop) / 44 (default). FAB 56. Avatar 28/36/44/64.
-- Dense desktop vs 44px: they do not conflict. Draw compact controls (28-36px) for mouse users and grow them only on touch with `@media (pointer: coarse)`, or keep the visual size and widen the hit area with a transparent `::before { inset: -4px }` on a positioned element. Never ship a sub-44px control to a coarse pointer.
+- Dense desktop vs 44px: they do not conflict. Draw compact controls (28-36px) for mouse users and grow them only on touch with `@media (pointer: coarse)`, or keep the visual size and widen the hit area with a transparent `::before { inset: -4px }` on a positioned element. Never ship a sub-44px control to a coarse pointer. The stylesheet does this for small buttons, chips, search, segmented labels, the toggle (45px tap area) and the round checkbox (44px).
 - Icons: SF Symbols look, 1.5px stroke at 20px, round caps and joins. Lucide or Phosphor (regular) are the closest open sets.
 - Toggle 51x31 knob 27. Segmented control height 32 (iOS) / 28 (macOS). Text field 44 (iOS) / 32 (macOS dense).
 - Z-index: base 0, sticky 10, dropdown 100, overlay 1000, modal 1100, toast 1200.
