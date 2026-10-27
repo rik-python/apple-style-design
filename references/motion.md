@@ -50,7 +50,7 @@ Twelve of the 64 analyzed shots were motion studies (Negi Design player, health 
 | Hover (pointer) | bg tint +4% or brightness 1.05; cards lift 2px and shadow e2 -> e3 | 200ms ease |
 | Press | `scale(.97)` buttons, `scale(.98)` cards, bg `surface-3` for rows | 120ms ease-out |
 | Release | back to 1 | spring |
-| Focus | 4px accent ring at 35%, appears instantly | 0-100ms |
+| Focus | 3px `accent-text` outline, 2px offset (inset inside clipped lists), appears instantly | 0-100ms |
 | Toggle | knob slides; knob stretches 27 -> 34px wide while pressed; track color crossfade | spring-bouncy |
 | Segmented | thumb slides under the new item | spring 300-400ms |
 | Disclosure | chevron rotates 90deg | 250ms ease-in-out |

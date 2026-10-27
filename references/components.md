@@ -23,7 +23,7 @@ Recipes for every component seen in the analyzed shots. CSS class names match `a
 **Primary pill** `.as-btn.as-btn--primary`
 - Height 44 (default), 36 (small), 52 (hero). Padding-x 20/16/28. Radius pill.
 - Fill `accent-fill` (not raw `accent`: white on `#007AFF` is only 4.02:1, see tokens.md 3a), text white 600 at 15-17px, tracking -0.01em.
-- Hover: brightness 1.06. Press: `scale(.97)` 120ms, release spring. Focus: `0 0 0 4px` accent 35%.
+- Hover: brightness 1.06. Press: `scale(.97)` 120ms, release spring. Focus: 3px `accent-text` outline with 2px offset (outline, not box-shadow, so the button shadow cannot cover it).
 - Disabled: 40% opacity, no shadow.
 
 **On dark or photo backgrounds** the primary flips: white fill, black text ("Learn more", "Explore", "Buy now" in the shots). The secondary becomes an outline pill: 1px `rgb(255 255 255/.5)` border, white text, transparent or ultra-thin glass fill ("Notify me", "Test Drive").
@@ -103,7 +103,7 @@ The Flight log and Health shots are the canonical recipe.
 - Each row is a `<label>` holding a native `<input type="radio">`, visually hidden but kept for keyboard and screen readers. Wrap the rows in `role="radiogroup"` with an `aria-label`, or a `<fieldset>` whose `<legend>` sits outside the rounded group.
 - Title 17px `label` (500 when chosen), hint as `.as-row__sub` 13-15px `label-2`, allowed to wrap.
 - The chosen row gets a trailing checkmark in `accent-text` (6x12 rotated stroke, 2.5px), 20px from the right edge. No radio circles, no colored row background.
-- Focus: inset 2px `accent-text` ring on the row (`:has(input:focus-visible)`).
+- Focus: inset 3px `accent-text` outline on the row (`:has(input:focus-visible)`), radius `r-lg` minus 3 so it stays concentric inside the clipped group.
 
 ```html
 <div class="as-list" role="radiogroup" aria-label="4K finish">

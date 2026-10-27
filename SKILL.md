@@ -78,7 +78,7 @@ When this skill produces a design:
 
 - Ship working code, not a description. Web: semantic HTML + the token CSS (inline or linked) + minimal JS for motion. Other targets: the platform recipe.
 - Always support light and dark unless the mode picker says dark-only, and respect `prefers-reduced-motion`.
-- Accessibility is part of the look: 4.5:1 text contrast (secondary gray on white passes at 15px+; check tertiary), 44x44 touch targets, visible focus ring (`0 0 0 4px` accent at 35%), labels on icon buttons.
+- Accessibility is part of the look: 4.5:1 text contrast (secondary gray on white passes at 15px+; check tertiary), 44x44 touch targets, visible focus ring (3px `accent-text` outline, 2px offset: an outline, never a box-shadow, so component shadows cannot hide it), labels on icon buttons.
 - Raw system accents fail contrast as button fills and as small text (white on `#007AFF` = 4.02:1, on `#0A84FF` = 3.65:1). Fill buttons with `accent-fill`, color text with `accent-text`, keep raw `accent` for glows, toggles, icons and big shapes. Safe shades per hue: `references/tokens.md` 3a.
 - State the mode, accent and the 2-3 signature details used in one short line after delivering, so the user can steer.
 

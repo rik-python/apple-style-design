@@ -48,6 +48,7 @@
   --as-e2: 0 1px 2px rgb(0 0 0 / .04), 0 4px 12px rgb(0 0 0 / .05), 0 16px 40px rgb(0 0 0 / .08);
   --as-e3: var(--as-e2), 0 32px 80px rgb(0 0 0 / .12);
   --as-ring-focus: 0 0 0 4px color-mix(in srgb, var(--as-accent) 35%, transparent);
+  --as-focus-ring: 3px solid var(--as-accent-text);   /* keyboard focus; accent-text keeps it 3:1+ in both themes */
 
   --as-material: rgb(250 250 252 / .72);
   --as-material-thick: rgb(246 246 248 / .86);
@@ -123,7 +124,8 @@ body {
   font: 400 17px/1.47 var(--as-font); letter-spacing: -.01em;
   -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
 }
-:focus-visible { outline: none; box-shadow: var(--as-ring-focus); }
+/* Focus is an outline, not a box-shadow: components with their own shadow (FAB glow, glass, outline buttons, checkbox) would erase a shadow ring. */
+:focus-visible { outline: var(--as-focus-ring); outline-offset: 2px; }
 ::selection { background: color-mix(in srgb, var(--as-accent) 25%, transparent); }
 
 .as-hero     { font: 700 clamp(44px, 7vw, 96px)/1.04 var(--as-font-display); letter-spacing: -.035em; text-wrap: balance; margin: 0; }
@@ -189,6 +191,7 @@ body {
 .as-seg input { position: absolute; opacity: 0; pointer-events: none; }
 .as-seg label { position: relative; z-index: 1; padding: 6px 16px; text-align: center; font: 500 14px/20px var(--as-font); color: var(--as-label); cursor: pointer; border-radius: 7px; transition: font-weight .2s; }
 .as-seg input:checked + label { font-weight: 600; }
+.as-seg input:focus-visible + label { outline: var(--as-focus-ring); outline-offset: 0; }   /* the radio itself is invisible */
 .as-seg__thumb { position: absolute; z-index: 0; top: 2px; bottom: 2px; left: 2px; border-radius: 7px; background: var(--as-surface);
   width: calc((100% - 4px) / var(--n, 2));
   box-shadow: 0 3px 8px rgb(0 0 0 / .12), 0 3px 1px rgb(0 0 0 / .04); transition: transform .45s var(--as-spring); }
@@ -210,7 +213,7 @@ body {
 .as-toggle input:checked + span::after { transform: translateX(20px); }
 .as-toggle input:active + span::after { width: 34px; }
 .as-toggle input:checked:active + span::after { transform: translateX(13px); }
-.as-toggle input:focus-visible + span { box-shadow: var(--as-ring-focus); }
+.as-toggle input:focus-visible + span { outline: var(--as-focus-ring); outline-offset: 2px; }
 
 /* ---------- Checkbox (round) ---------- */
 .as-check { appearance: none; width: 22px; height: 22px; margin: 0; border-radius: 50%; box-shadow: inset 0 0 0 1.5px var(--as-label-3); cursor: pointer; display: inline-grid; place-items: center; transition: background-color .2s, box-shadow .2s; }
@@ -245,6 +248,8 @@ body {
 .as-list { list-style: none; margin: 0; padding: 0; background: var(--as-surface); border-radius: var(--as-r-lg); overflow: hidden; }
 .as-row { position: relative; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 11px 16px; color: inherit; text-decoration: none; transition: background-color .12s; }
 .as-row:active { background: var(--as-surface-3); }
+/* .as-list clips overflow, so rows draw their ring inside, concentric with the group's corners */
+.as-list .as-row:focus-visible, .as-choice:has(input:focus-visible) { outline: var(--as-focus-ring); outline-offset: -3px; border-radius: calc(var(--as-r-lg) - 3px); }
 .as-row + .as-row::before { content: ""; position: absolute; top: 0; right: 0; left: var(--inset, 16px); border-top: .5px solid var(--as-separator); }
 .as-row--icon { --inset: 58px; }
 .as-row__body { flex: 1; min-width: 0; }
@@ -261,7 +266,6 @@ body {
 .as-choice .as-row__sub { white-space: normal; }
 .as-choice:has(input:checked)::after { content: ""; position: absolute; right: 20px; top: 50%; width: 6px; height: 12px;
   border: solid var(--as-accent-text); border-width: 0 2.5px 2.5px 0; transform: translateY(-62%) rotate(45deg); }
-.as-choice:has(input:focus-visible) { box-shadow: inset 0 0 0 2px var(--as-accent-text); }
 
 /* ---------- Cards, widgets ---------- */
 .as-card { background: var(--as-surface); border-radius: var(--as-r-lg); padding: 20px; box-shadow: var(--as-e1); }
