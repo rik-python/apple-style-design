@@ -237,6 +237,7 @@ body {
 .as-chip { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px; border-radius: 999px; border: 0; background: var(--as-surface-2); color: var(--as-label); font: 500 14px/1 var(--as-font); cursor: pointer; white-space: nowrap; transition: background-color .2s, color .2s, transform .5s var(--as-spring); }
 .as-chip[aria-pressed="true"] { background: var(--as-accent-fill); color: var(--as-on-accent); }
 .as-chip:active { transform: scale(.96); transition-duration: .12s; }
+button.as-glass:active, a.as-glass:active { transform: scale(.97); }
 .as-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex: none; }
 .as-status { --c: var(--as-blue); display: inline-flex; align-items: center; gap: 5px; height: 22px; padding: 0 8px; border-radius: 6px; font: 500 12px/1 var(--as-font);
   color: color-mix(in srgb, var(--c) 85%, var(--as-label)); background: color-mix(in srgb, var(--c) 13%, transparent); box-shadow: inset 0 0 0 .5px color-mix(in srgb, var(--c) 35%, transparent); }
@@ -347,6 +348,8 @@ body {
   .as-chip:hover { background: var(--as-surface-3); }
   .as-chip[aria-pressed="true"]:hover, .as-fab:hover { filter: brightness(1.06); }
   .as-icon-btn:not(.as-glass):hover { background: var(--as-fill-2); }
+  .as-icon-btn:hover, button.as-glass:hover, a.as-glass:hover { filter: brightness(1.08); }   /* also reaches glass and inline-colored buttons */
+  .as-field:not(:focus-within):hover { background: var(--as-fill-2); }
   a.as-row:hover:not(:active), .as-choice:hover:not(:active) { background: var(--as-fill-4); }   /* :not(:active) keeps the pressed color visible */
 }
 

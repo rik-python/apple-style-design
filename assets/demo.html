@@ -13,7 +13,7 @@
   .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
   header.top { position: sticky; top: 12px; z-index: 10; margin: 12px auto 0; max-width: 1180px; padding: 0 20px; }
   header.top nav { display: flex; align-items: center; gap: 28px; height: 56px; padding: 0 10px 0 20px; border-radius: 999px; }
-  header.top nav a { color: var(--as-label-2); text-decoration: none; font-size: 14px; }
+  header.top nav a { color: var(--as-label-2); text-decoration: none; font-size: 14px; transition: color .2s var(--as-ease); }
   header.top .logo { font-weight: 600; color: var(--as-label); font-size: 17px; letter-spacing: -.02em; margin-right: auto; }
   section { padding: 96px 0 0; }
   .hero { text-align: center; padding-top: 120px; }
@@ -24,7 +24,7 @@
   .grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
   .row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
   .stack { display: grid; gap: 16px; }
-  .stage { border-radius: var(--as-r-2xl); padding: 56px 24px; display: grid; place-items: center; gap: 28px; min-height: 380px; overflow: hidden; }
+  .stage { border-radius: var(--as-r-2xl); padding: 56px 24px; display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; gap: 28px; min-height: 380px; overflow: hidden; }   /* minmax(0) lets the column shrink below its content on phones */
   .phone { width: 340px; max-width: 100%; background: var(--as-bg-grouped); border-radius: 48px; padding: 18px 16px 28px; box-shadow: 0 0 0 10px #1d1d1f, var(--as-e3); }
   .phone .status { display: flex; justify-content: space-between; font: 600 15px var(--as-font); padding: 4px 14px 14px; }
   .phone .title { display: flex; justify-content: space-between; align-items: center; padding: 0 4px; }
@@ -37,7 +37,7 @@
   .stock .ch { color: #30D158; font: 600 17px var(--as-font); text-align: right; }
   .palette { width: min(620px, 100%); border-radius: 24px; padding: 18px 14px 14px; color: #fff; text-align: left; }
   .palette .q { display: flex; align-items: center; gap: 12px; padding: 0 6px 12px; font-size: 19px; color: rgb(235 235 245 / .6); }
-  .palette .hints { display: flex; gap: 8px; align-items: center; padding: 0 6px 14px; font-size: 14px; color: rgb(235 235 245 / .6); }
+  .palette .hints { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; padding: 0 6px 14px; font-size: 14px; color: rgb(235 235 245 / .6); }
   .palette .as-kbd { background: rgb(255 255 255 / .12); color: #fff; }
   .palette .lbl { font-size: 13px; color: rgb(235 235 245 / .6); padding: 8px 6px 6px; }
   .palette .it { display: flex; align-items: center; gap: 12px; padding: 8px; border-radius: 14px; }
@@ -65,7 +65,13 @@
   .tiles div { aspect-ratio: 1; border-radius: 10px; }
   .tiles p { margin: 6px 0 0; font: 600 13px var(--as-font); }
   footer { padding: 96px 0 48px; color: var(--as-label-2); font-size: 13px; text-align: center; }
-  @media (max-width: 640px) { .app { grid-template-columns: 1fr; } .app aside { display: none; } header.top nav a.hide-sm { display: none; } }
+  @media (hover: hover) {
+    header.top nav a:hover { color: var(--as-label); }
+    .app aside a:not(.on):hover { background: var(--as-fill-4); }
+    .app aside a.on:hover { filter: brightness(.97); }
+  }
+  .app aside a:active { transform: scale(.98); }
+  @media (max-width: 640px) { .stage { padding: 40px 16px; } .palette .hints { display: none; } .palette .q { font-size: 17px; } .app { grid-template-columns: 1fr; } .app aside { display: none; } header.top nav a.hide-sm { display: none; } }
 </style>
 </head>
 <body>
